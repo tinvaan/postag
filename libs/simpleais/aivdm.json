@@ -1,0 +1,2739 @@
+{
+    "messages": {
+        "1": {
+            "name": "Position Report Class A",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 41,
+                    "description": "Navigation Status",
+                    "member": "status",
+                    "type": "e"
+                },
+                {
+                    "start": 42,
+                    "end": 49,
+                    "description": "Rate of Turn (ROT)",
+                    "member": "turn",
+                    "type": "I3"
+                },
+                {
+                    "start": 50,
+                    "end": 59,
+                    "description": "Speed Over Ground (SOG)",
+                    "member": "speed",
+                    "type": "U1"
+                },
+                {
+                    "start": 60,
+                    "end": 60,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 61,
+                    "end": 88,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 89,
+                    "end": 115,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 116,
+                    "end": 127,
+                    "description": "Course Over Ground (COG)",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 128,
+                    "end": 136,
+                    "description": "True Heading (HDG)",
+                    "member": "heading",
+                    "type": "u"
+                },
+                {
+                    "start": 137,
+                    "end": 142,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 143,
+                    "end": 144,
+                    "description": "Maneuver Indicator",
+                    "member": "maneuver",
+                    "type": "e"
+                },
+                {
+                    "start": 145,
+                    "end": 147,
+                    "description": "Spare",
+                    "member": "ignored-145",
+                    "type": "x"
+                },
+                {
+                    "start": 148,
+                    "end": 148,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 149,
+                    "end": 167,
+                    "description": "Radio status",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "2": {
+            "name": "Position Report Class A (Assigned schedule)",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 41,
+                    "description": "Navigation Status",
+                    "member": "status",
+                    "type": "e"
+                },
+                {
+                    "start": 42,
+                    "end": 49,
+                    "description": "Rate of Turn (ROT)",
+                    "member": "turn",
+                    "type": "I3"
+                },
+                {
+                    "start": 50,
+                    "end": 59,
+                    "description": "Speed Over Ground (SOG)",
+                    "member": "speed",
+                    "type": "U1"
+                },
+                {
+                    "start": 60,
+                    "end": 60,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 61,
+                    "end": 88,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 89,
+                    "end": 115,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 116,
+                    "end": 127,
+                    "description": "Course Over Ground (COG)",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 128,
+                    "end": 136,
+                    "description": "True Heading (HDG)",
+                    "member": "heading",
+                    "type": "u"
+                },
+                {
+                    "start": 137,
+                    "end": 142,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 143,
+                    "end": 144,
+                    "description": "Maneuver Indicator",
+                    "member": "maneuver",
+                    "type": "e"
+                },
+                {
+                    "start": 145,
+                    "end": 147,
+                    "description": "Spare",
+                    "member": "ignored-145",
+                    "type": "x"
+                },
+                {
+                    "start": 148,
+                    "end": 148,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 149,
+                    "end": 167,
+                    "description": "Radio status",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "3": {
+            "name": "Position Report Class A (Response to interrogation)",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 41,
+                    "description": "Navigation Status",
+                    "member": "status",
+                    "type": "e"
+                },
+                {
+                    "start": 42,
+                    "end": 49,
+                    "description": "Rate of Turn (ROT)",
+                    "member": "turn",
+                    "type": "I3"
+                },
+                {
+                    "start": 50,
+                    "end": 59,
+                    "description": "Speed Over Ground (SOG)",
+                    "member": "speed",
+                    "type": "U1"
+                },
+                {
+                    "start": 60,
+                    "end": 60,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 61,
+                    "end": 88,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 89,
+                    "end": 115,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 116,
+                    "end": 127,
+                    "description": "Course Over Ground (COG)",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 128,
+                    "end": 136,
+                    "description": "True Heading (HDG)",
+                    "member": "heading",
+                    "type": "u"
+                },
+                {
+                    "start": 137,
+                    "end": 142,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 143,
+                    "end": 144,
+                    "description": "Maneuver Indicator",
+                    "member": "maneuver",
+                    "type": "e"
+                },
+                {
+                    "start": 145,
+                    "end": 147,
+                    "description": "Spare",
+                    "member": "ignored-145",
+                    "type": "x"
+                },
+                {
+                    "start": 148,
+                    "end": 148,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 149,
+                    "end": 167,
+                    "description": "Radio status",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "4": {
+            "name": "Base Station Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 51,
+                    "description": "Year (UTC)",
+                    "member": "year",
+                    "type": "u"
+                },
+                {
+                    "start": 52,
+                    "end": 55,
+                    "description": "Month (UTC)",
+                    "member": "month",
+                    "type": "u"
+                },
+                {
+                    "start": 56,
+                    "end": 60,
+                    "description": "Day (UTC)",
+                    "member": "day",
+                    "type": "u"
+                },
+                {
+                    "start": 61,
+                    "end": 65,
+                    "description": "Hour (UTC)",
+                    "member": "hour",
+                    "type": "u"
+                },
+                {
+                    "start": 66,
+                    "end": 71,
+                    "description": "Minute (UTC)",
+                    "member": "minute",
+                    "type": "u"
+                },
+                {
+                    "start": 72,
+                    "end": 77,
+                    "description": "Second (UTC)",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 78,
+                    "end": 78,
+                    "description": "Fix quality",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 79,
+                    "end": 106,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 107,
+                    "end": 133,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 134,
+                    "end": 137,
+                    "description": "Type of EPFD",
+                    "member": "epfd",
+                    "type": "e"
+                },
+                {
+                    "start": 138,
+                    "end": 147,
+                    "description": "Spare",
+                    "member": "ignored-138",
+                    "type": "x"
+                },
+                {
+                    "start": 148,
+                    "end": 148,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 149,
+                    "end": 167,
+                    "description": "SOTDMA state",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "5": {
+            "name": "Static and Voyage Related Data",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "AIS Version",
+                    "member": "ais_version",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "IMO Number",
+                    "member": "imo",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 111,
+                    "description": "Call Sign",
+                    "member": "callsign",
+                    "type": "t"
+                },
+                {
+                    "start": 112,
+                    "end": 231,
+                    "description": "Vessel Name",
+                    "member": "shipname",
+                    "type": "t"
+                },
+                {
+                    "start": 232,
+                    "end": 239,
+                    "description": "Ship Type",
+                    "member": "shiptype",
+                    "type": "e"
+                },
+                {
+                    "start": 240,
+                    "end": 248,
+                    "description": "Dimension to Bow",
+                    "member": "to_bow",
+                    "type": "u"
+                },
+                {
+                    "start": 249,
+                    "end": 257,
+                    "description": "Dimension to Stern",
+                    "member": "to_stern",
+                    "type": "u"
+                },
+                {
+                    "start": 258,
+                    "end": 263,
+                    "description": "Dimension to Port",
+                    "member": "to_port",
+                    "type": "u"
+                },
+                {
+                    "start": 264,
+                    "end": 269,
+                    "description": "Dimension to Starboard",
+                    "member": "to_starboard",
+                    "type": "u"
+                },
+                {
+                    "start": 270,
+                    "end": 273,
+                    "description": "Position Fix Type",
+                    "member": "epfd",
+                    "type": "e"
+                },
+                {
+                    "start": 274,
+                    "end": 277,
+                    "description": "ETA month (UTC)",
+                    "member": "month",
+                    "type": "u"
+                },
+                {
+                    "start": 278,
+                    "end": 282,
+                    "description": "ETA day (UTC)",
+                    "member": "day",
+                    "type": "u"
+                },
+                {
+                    "start": 283,
+                    "end": 287,
+                    "description": "ETA hour (UTC)",
+                    "member": "hour",
+                    "type": "u"
+                },
+                {
+                    "start": 288,
+                    "end": 293,
+                    "description": "ETA minute (UTC)",
+                    "member": "minute",
+                    "type": "u"
+                },
+                {
+                    "start": 294,
+                    "end": 301,
+                    "description": "Draught",
+                    "member": "draught",
+                    "type": "U1"
+                },
+                {
+                    "start": 302,
+                    "end": 421,
+                    "description": "Destination",
+                    "member": "destination",
+                    "type": "t"
+                },
+                {
+                    "start": 422,
+                    "end": 422,
+                    "description": "DTE",
+                    "member": "dte",
+                    "type": "b"
+                },
+                {
+                    "start": 423,
+                    "end": 423,
+                    "description": "Spare",
+                    "member": "ignored-423",
+                    "type": "x"
+                }
+            ]
+        },
+        "6": {
+            "name": "Binary Addressed Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Sequence Number",
+                    "member": "seqno",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 70,
+                    "description": "Retransmit flag",
+                    "member": "retransmit",
+                    "type": "b"
+                },
+                {
+                    "start": 71,
+                    "end": 71,
+                    "description": "Spare",
+                    "member": "ignored-71",
+                    "type": "x"
+                },
+                {
+                    "start": 72,
+                    "end": 81,
+                    "description": "Designated Area Code",
+                    "member": "dac",
+                    "type": "u"
+                },
+                {
+                    "start": 82,
+                    "end": 87,
+                    "description": "Functional ID",
+                    "member": "fid",
+                    "type": "u"
+                },
+                {
+                    "start": 88,
+                    "end": 88,
+                    "description": "Data",
+                    "member": "data",
+                    "type": "d"
+                }
+            ]
+        },
+        "7": {
+            "name": "Binary Acknowledge",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "MMSI number 1",
+                    "member": "mmsi1",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 71,
+                    "description": "Sequence for MMSI 1",
+                    "member": "mmsiseq1",
+                    "type": "u"
+                },
+                {
+                    "start": 72,
+                    "end": 101,
+                    "description": "MMSI number 2",
+                    "member": "mmsi2",
+                    "type": "u"
+                },
+                {
+                    "start": 102,
+                    "end": 103,
+                    "description": "Sequence for MMSI 2",
+                    "member": "mmsiseq2",
+                    "type": "u"
+                },
+                {
+                    "start": 104,
+                    "end": 133,
+                    "description": "MMSI number 3",
+                    "member": "mmsi3",
+                    "type": "u"
+                },
+                {
+                    "start": 134,
+                    "end": 135,
+                    "description": "Sequence for MMSI 3",
+                    "member": "mmsiseq3",
+                    "type": "u"
+                },
+                {
+                    "start": 136,
+                    "end": 165,
+                    "description": "MMSI number 4",
+                    "member": "mmsi4",
+                    "type": "u"
+                },
+                {
+                    "start": 166,
+                    "end": 167,
+                    "description": "Sequence for MMSI 4",
+                    "member": "mmsiseq4",
+                    "type": "u"
+                }
+            ]
+        },
+        "8": {
+            "name": "Binary Broadcast Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 49,
+                    "description": "Designated Area Code",
+                    "member": "dac",
+                    "type": "u"
+                },
+                {
+                    "start": 50,
+                    "end": 55,
+                    "description": "Functional ID",
+                    "member": "fid",
+                    "type": "u"
+                },
+                {
+                    "start": 56,
+                    "end": 56,
+                    "description": "Data",
+                    "member": "data",
+                    "type": "d"
+                }
+            ]
+        },
+        "9": {
+            "name": "Standard SAR Aircraft Position Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 49,
+                    "description": "Altitude",
+                    "member": "alt",
+                    "type": "u"
+                },
+                {
+                    "start": 50,
+                    "end": 59,
+                    "description": "SOG",
+                    "member": "speed",
+                    "type": "u"
+                },
+                {
+                    "start": 60,
+                    "end": 60,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "u"
+                },
+                {
+                    "start": 61,
+                    "end": 88,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 89,
+                    "end": 115,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 116,
+                    "end": 127,
+                    "description": "Course Over Ground",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 128,
+                    "end": 133,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 134,
+                    "end": 141,
+                    "description": "Regional reserved",
+                    "member": "regional",
+                    "type": "x"
+                },
+                {
+                    "start": 142,
+                    "end": 142,
+                    "description": "DTE",
+                    "member": "dte",
+                    "type": "b"
+                },
+                {
+                    "start": 143,
+                    "end": 145,
+                    "description": "Spare",
+                    "member": "ignored-143",
+                    "type": "x"
+                },
+                {
+                    "start": 146,
+                    "end": 146,
+                    "description": "Assigned",
+                    "member": "assigned",
+                    "type": "b"
+                },
+                {
+                    "start": 147,
+                    "end": 147,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 148,
+                    "end": 167,
+                    "description": "Radio status",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "10": {
+            "name": "UTC/Date Inquiry",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 71,
+                    "description": "Spare",
+                    "member": "ignored-70",
+                    "type": "x"
+                }
+            ]
+        },
+        "11": {
+            "name": "UTC/Date Response",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Sequence Number",
+                    "member": "seqno",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 70,
+                    "description": "Retransmit flag",
+                    "member": "retransmit",
+                    "type": "b"
+                },
+                {
+                    "start": 71,
+                    "end": 71,
+                    "description": "Spare",
+                    "member": "ignored-71",
+                    "type": "x"
+                },
+                {
+                    "start": 72,
+                    "end": 72,
+                    "description": "Text",
+                    "member": "text",
+                    "type": "t"
+                }
+            ]
+        },
+        "12": {
+            "name": "Addressed Safety-Related Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Sequence Number",
+                    "member": "seqno",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 70,
+                    "description": "Retransmit flag",
+                    "member": "retransmit",
+                    "type": "b"
+                },
+                {
+                    "start": 71,
+                    "end": 71,
+                    "description": "Spare",
+                    "member": "ignored-71",
+                    "type": "x"
+                },
+                {
+                    "start": 72,
+                    "end": 72,
+                    "description": "Text",
+                    "member": "text",
+                    "type": "t"
+                }
+            ]
+        },
+        "13": {
+            "name": "Safety-Related Acknowledgement",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 40,
+                    "description": "Text",
+                    "member": "text",
+                    "type": "t"
+                }
+            ]
+        },
+        "14": {
+            "name": "Safety-Related Broadcast Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 40,
+                    "description": "Text",
+                    "member": "text",
+                    "type": "t"
+                }
+            ]
+        },
+        "15": {
+            "name": "Interrogation",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Interrogated MMSI",
+                    "member": "mmsi1",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 75,
+                    "description": "First message type",
+                    "member": "type1_1",
+                    "type": "u"
+                },
+                {
+                    "start": 76,
+                    "end": 87,
+                    "description": "First slot offset",
+                    "member": "offset1_1",
+                    "type": "u"
+                },
+                {
+                    "start": 88,
+                    "end": 89,
+                    "description": "Spare",
+                    "member": "ignored-88",
+                    "type": "x"
+                },
+                {
+                    "start": 90,
+                    "end": 95,
+                    "description": "Second message type",
+                    "member": "type1_2",
+                    "type": "u"
+                },
+                {
+                    "start": 96,
+                    "end": 107,
+                    "description": "Second slot offset",
+                    "member": "offset1_2",
+                    "type": "u"
+                },
+                {
+                    "start": 108,
+                    "end": 109,
+                    "description": "Spare",
+                    "member": "ignored-108",
+                    "type": "x"
+                },
+                {
+                    "start": 110,
+                    "end": 139,
+                    "description": "Interrogated MMSI",
+                    "member": "mmsi2",
+                    "type": "u"
+                },
+                {
+                    "start": 140,
+                    "end": 145,
+                    "description": "First message type",
+                    "member": "type2_1",
+                    "type": "u"
+                },
+                {
+                    "start": 146,
+                    "end": 157,
+                    "description": "First slot offset",
+                    "member": "offset2_1",
+                    "type": "u"
+                },
+                {
+                    "start": 158,
+                    "end": 159,
+                    "description": "Spare",
+                    "member": "ignored-158",
+                    "type": "x"
+                }
+            ]
+        },
+        "16": {
+            "name": "Assignment Mode Command",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 69,
+                    "description": "Destination A MMSI",
+                    "member": "mmsi1",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 81,
+                    "description": "Offset A",
+                    "member": "offset1",
+                    "type": "u"
+                },
+                {
+                    "start": 82,
+                    "end": 91,
+                    "description": "Increment A",
+                    "member": "increment1",
+                    "type": "u"
+                },
+                {
+                    "start": 92,
+                    "end": 121,
+                    "description": "Destination B MMSI",
+                    "member": "mmsi2",
+                    "type": "u"
+                },
+                {
+                    "start": 122,
+                    "end": 133,
+                    "description": "Offset B",
+                    "member": "offset2",
+                    "type": "u"
+                },
+                {
+                    "start": 134,
+                    "end": 143,
+                    "description": "Increment B",
+                    "member": "increment2",
+                    "type": "u"
+                }
+            ]
+        },
+        "17": {
+            "name": "DGNSS Broadcast Binary Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "Source MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 57,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I1"
+                },
+                {
+                    "start": 58,
+                    "end": 74,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I1"
+                },
+                {
+                    "start": 75,
+                    "end": 79,
+                    "description": "Spare",
+                    "member": "ignored-75",
+                    "type": "x"
+                },
+                {
+                    "start": 80,
+                    "end": 815,
+                    "description": "Payload",
+                    "member": "data",
+                    "type": "d"
+                }
+            ]
+        },
+        "18": {
+            "name": "Standard Class B CS Position Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 45,
+                    "description": "Regional Reserved",
+                    "member": "reserved",
+                    "type": "x"
+                },
+                {
+                    "start": 46,
+                    "end": 55,
+                    "description": "Speed Over Ground",
+                    "member": "speed",
+                    "type": "U1"
+                },
+                {
+                    "start": 56,
+                    "end": 56,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 57,
+                    "end": 84,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 85,
+                    "end": 111,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 112,
+                    "end": 123,
+                    "description": "Course Over Ground",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 124,
+                    "end": 132,
+                    "description": "True Heading",
+                    "member": "heading",
+                    "type": "u"
+                },
+                {
+                    "start": 133,
+                    "end": 138,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 139,
+                    "end": 140,
+                    "description": "Regional reserved",
+                    "member": "regional",
+                    "type": "u"
+                },
+                {
+                    "start": 141,
+                    "end": 141,
+                    "description": "CS Unit",
+                    "member": "cs",
+                    "type": "b"
+                },
+                {
+                    "start": 142,
+                    "end": 142,
+                    "description": "Display flag",
+                    "member": "display",
+                    "type": "b"
+                },
+                {
+                    "start": 143,
+                    "end": 143,
+                    "description": "DSC Flag",
+                    "member": "dsc",
+                    "type": "b"
+                },
+                {
+                    "start": 144,
+                    "end": 144,
+                    "description": "Band flag",
+                    "member": "band",
+                    "type": "b"
+                },
+                {
+                    "start": 145,
+                    "end": 145,
+                    "description": "Message 22 flag",
+                    "member": "msg22",
+                    "type": "b"
+                },
+                {
+                    "start": 146,
+                    "end": 146,
+                    "description": "Assigned",
+                    "member": "assigned",
+                    "type": "b"
+                },
+                {
+                    "start": 147,
+                    "end": 147,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 148,
+                    "end": 167,
+                    "description": "Radio status",
+                    "member": "radio",
+                    "type": "u"
+                }
+            ]
+        },
+        "19": {
+            "name": "Extended Class B CS Position Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 45,
+                    "description": "Regional Reserved",
+                    "member": "reserved",
+                    "type": "u"
+                },
+                {
+                    "start": 46,
+                    "end": 55,
+                    "description": "Speed Over Ground",
+                    "member": "speed",
+                    "type": "U1"
+                },
+                {
+                    "start": 56,
+                    "end": 56,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 57,
+                    "end": 84,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 85,
+                    "end": 111,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 112,
+                    "end": 123,
+                    "description": "Course Over Ground",
+                    "member": "course",
+                    "type": "U1"
+                },
+                {
+                    "start": 124,
+                    "end": 132,
+                    "description": "True Heading",
+                    "member": "heading",
+                    "type": "u"
+                },
+                {
+                    "start": 133,
+                    "end": 138,
+                    "description": "Time Stamp",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 139,
+                    "end": 142,
+                    "description": "Regional reserved",
+                    "member": "regional",
+                    "type": "u"
+                },
+                {
+                    "start": 143,
+                    "end": 262,
+                    "description": "Name",
+                    "member": "shipname",
+                    "type": "s"
+                },
+                {
+                    "start": 263,
+                    "end": 270,
+                    "description": "Type of ship and cargo",
+                    "member": "shiptype",
+                    "type": "e"
+                },
+                {
+                    "start": 271,
+                    "end": 279,
+                    "description": "Dimension to Bow",
+                    "member": "to_bow",
+                    "type": "u"
+                },
+                {
+                    "start": 280,
+                    "end": 288,
+                    "description": "Dimension to Stern",
+                    "member": "to_stern",
+                    "type": "u"
+                },
+                {
+                    "start": 289,
+                    "end": 294,
+                    "description": "Dimension to Port",
+                    "member": "to_port",
+                    "type": "u"
+                },
+                {
+                    "start": 295,
+                    "end": 300,
+                    "description": "Dimension to Starboard",
+                    "member": "to_starboard",
+                    "type": "u"
+                },
+                {
+                    "start": 301,
+                    "end": 304,
+                    "description": "Position Fix Type",
+                    "member": "epfd",
+                    "type": "e"
+                },
+                {
+                    "start": 305,
+                    "end": 305,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 306,
+                    "end": 306,
+                    "description": "DTE",
+                    "member": "dte",
+                    "type": "b"
+                },
+                {
+                    "start": 307,
+                    "end": 307,
+                    "description": "Assigned mode flag",
+                    "member": "assigned",
+                    "type": "u"
+                },
+                {
+                    "start": 308,
+                    "end": 311,
+                    "description": "Spare",
+                    "member": "ignored-308",
+                    "type": "x"
+                }
+            ]
+        },
+        "20": {
+            "name": "Data Link Management Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 51,
+                    "description": "Offset number 1",
+                    "member": "offset1",
+                    "type": "u"
+                },
+                {
+                    "start": 52,
+                    "end": 55,
+                    "description": "Reserved slots",
+                    "member": "number1",
+                    "type": "u"
+                },
+                {
+                    "start": 56,
+                    "end": 58,
+                    "description": "Time-out",
+                    "member": "timeout1",
+                    "type": "u"
+                },
+                {
+                    "start": 59,
+                    "end": 69,
+                    "description": "Increment",
+                    "member": "increment1",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 81,
+                    "description": "Offset number 2",
+                    "member": "offset2",
+                    "type": "u"
+                },
+                {
+                    "start": 82,
+                    "end": 85,
+                    "description": "Reserved slots",
+                    "member": "number2",
+                    "type": "u"
+                },
+                {
+                    "start": 86,
+                    "end": 88,
+                    "description": "Time-out",
+                    "member": "timeout2",
+                    "type": "u"
+                },
+                {
+                    "start": 89,
+                    "end": 99,
+                    "description": "Increment",
+                    "member": "increment2",
+                    "type": "u"
+                },
+                {
+                    "start": 100,
+                    "end": 111,
+                    "description": "Offset number 3",
+                    "member": "offset3",
+                    "type": "u"
+                },
+                {
+                    "start": 112,
+                    "end": 115,
+                    "description": "Reserved slots",
+                    "member": "number3",
+                    "type": "u"
+                },
+                {
+                    "start": 116,
+                    "end": 118,
+                    "description": "Time-out",
+                    "member": "timeout3",
+                    "type": "u"
+                },
+                {
+                    "start": 119,
+                    "end": 129,
+                    "description": "Increment",
+                    "member": "increment3",
+                    "type": "u"
+                },
+                {
+                    "start": 130,
+                    "end": 141,
+                    "description": "Offset number 4",
+                    "member": "offset4",
+                    "type": "u"
+                },
+                {
+                    "start": 142,
+                    "end": 145,
+                    "description": "Reserved slots",
+                    "member": "number4",
+                    "type": "u"
+                },
+                {
+                    "start": 146,
+                    "end": 148,
+                    "description": "Time-out",
+                    "member": "timeout4",
+                    "type": "u"
+                },
+                {
+                    "start": 149,
+                    "end": 159,
+                    "description": "Increment",
+                    "member": "increment4",
+                    "type": "u"
+                }
+            ]
+        },
+        "21": {
+            "name": "Aid-to-Navigation Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 42,
+                    "description": "Aid type",
+                    "member": "aid_type",
+                    "type": "e"
+                },
+                {
+                    "start": 43,
+                    "end": 162,
+                    "description": "Name",
+                    "member": "name",
+                    "type": "t"
+                },
+                {
+                    "start": 163,
+                    "end": 163,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "b"
+                },
+                {
+                    "start": 164,
+                    "end": 191,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 192,
+                    "end": 218,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 219,
+                    "end": 227,
+                    "description": "Dimension to Bow",
+                    "member": "to_bow",
+                    "type": "u"
+                },
+                {
+                    "start": 228,
+                    "end": 236,
+                    "description": "Dimension to Stern",
+                    "member": "to_stern",
+                    "type": "u"
+                },
+                {
+                    "start": 237,
+                    "end": 242,
+                    "description": "Dimension to Port",
+                    "member": "to_port",
+                    "type": "u"
+                },
+                {
+                    "start": 243,
+                    "end": 248,
+                    "description": "Dimension to Starboard",
+                    "member": "to_starboard",
+                    "type": "u"
+                },
+                {
+                    "start": 249,
+                    "end": 252,
+                    "description": "Type of EPFD",
+                    "member": "epfd",
+                    "type": "e"
+                },
+                {
+                    "start": 253,
+                    "end": 258,
+                    "description": "UTC second",
+                    "member": "second",
+                    "type": "u"
+                },
+                {
+                    "start": 259,
+                    "end": 259,
+                    "description": "Off-Position Indicator",
+                    "member": "off_position",
+                    "type": "b"
+                },
+                {
+                    "start": 260,
+                    "end": 267,
+                    "description": "Regional reserved",
+                    "member": "regional",
+                    "type": "u"
+                },
+                {
+                    "start": 268,
+                    "end": 268,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "b"
+                },
+                {
+                    "start": 269,
+                    "end": 269,
+                    "description": "Virtual-aid flag",
+                    "member": "virtual_aid",
+                    "type": "b"
+                },
+                {
+                    "start": 270,
+                    "end": 270,
+                    "description": "Assigned-mode flag",
+                    "member": "assigned",
+                    "type": "b"
+                },
+                {
+                    "start": 271,
+                    "end": 271,
+                    "description": "Spare",
+                    "member": "ignored-271",
+                    "type": "x"
+                },
+                {
+                    "start": 272,
+                    "end": 360,
+                    "description": "Name Extension",
+                    "member": "ignored-272",
+                    "type": "t"
+                }
+            ]
+        },
+        "22": {
+            "name": "Channel Management",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 51,
+                    "description": "Channel A",
+                    "member": "channel_a",
+                    "type": "u"
+                },
+                {
+                    "start": 52,
+                    "end": 63,
+                    "description": "Channel B",
+                    "member": "channel_b",
+                    "type": "u"
+                },
+                {
+                    "start": 64,
+                    "end": 67,
+                    "description": "Tx/Rx mode",
+                    "member": "txrx",
+                    "type": "u"
+                },
+                {
+                    "start": 68,
+                    "end": 68,
+                    "description": "Power",
+                    "member": "power",
+                    "type": "b"
+                },
+                {
+                    "start": 69,
+                    "end": 86,
+                    "description": "NE Longitude",
+                    "member": "ne_lon",
+                    "type": "I1"
+                },
+                {
+                    "start": 87,
+                    "end": 103,
+                    "description": "NE Latitude",
+                    "member": "ne_lat",
+                    "type": "I1"
+                },
+                {
+                    "start": 104,
+                    "end": 121,
+                    "description": "SW Longitude",
+                    "member": "sw_lon",
+                    "type": "I1"
+                },
+                {
+                    "start": 122,
+                    "end": 138,
+                    "description": "SW Latitude",
+                    "member": "sw_lat",
+                    "type": "I1"
+                },
+                {
+                    "start": 69,
+                    "end": 98,
+                    "description": "MMSI1",
+                    "member": "dest1",
+                    "type": "u"
+                },
+                {
+                    "start": 104,
+                    "end": 133,
+                    "description": "MMSI2",
+                    "member": "dest2",
+                    "type": "u"
+                },
+                {
+                    "start": 139,
+                    "end": 139,
+                    "description": "Addressed",
+                    "member": "addressed",
+                    "type": "b"
+                },
+                {
+                    "start": 140,
+                    "end": 140,
+                    "description": "Channel A Band",
+                    "member": "band_a",
+                    "type": "b"
+                },
+                {
+                    "start": 141,
+                    "end": 141,
+                    "description": "Channel B Band",
+                    "member": "band_b",
+                    "type": "b"
+                },
+                {
+                    "start": 142,
+                    "end": 144,
+                    "description": "Zone size",
+                    "member": "zonesize",
+                    "type": "u"
+                },
+                {
+                    "start": 145,
+                    "end": 167,
+                    "description": "Spare",
+                    "member": "ignored-145",
+                    "type": "x"
+                }
+            ]
+        },
+        "23": {
+            "name": "Group Assignment Command",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Spare",
+                    "member": "ignored-38",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 57,
+                    "description": "NE Longitude",
+                    "member": "ne_lon",
+                    "type": "u"
+                },
+                {
+                    "start": 58,
+                    "end": 74,
+                    "description": "NE Latitude",
+                    "member": "ne_lat",
+                    "type": "u"
+                },
+                {
+                    "start": 75,
+                    "end": 92,
+                    "description": "SW Longitude",
+                    "member": "sw_lon",
+                    "type": "u"
+                },
+                {
+                    "start": 93,
+                    "end": 109,
+                    "description": "SW Latitude",
+                    "member": "sw_lat",
+                    "type": "u"
+                },
+                {
+                    "start": 110,
+                    "end": 113,
+                    "description": "Station Type",
+                    "member": "station_type",
+                    "type": "e"
+                },
+                {
+                    "start": 114,
+                    "end": 121,
+                    "description": "Ship Type",
+                    "member": "ship_type",
+                    "type": "e"
+                },
+                {
+                    "start": 122,
+                    "end": 143,
+                    "description": "Spare",
+                    "member": "ignored-122",
+                    "type": "x"
+                },
+                {
+                    "start": 144,
+                    "end": 145,
+                    "description": "Tx/Rx Mode",
+                    "member": "txrx",
+                    "type": "u"
+                },
+                {
+                    "start": 146,
+                    "end": 149,
+                    "description": "Report Interval",
+                    "member": "interval",
+                    "type": "e"
+                },
+                {
+                    "start": 150,
+                    "end": 153,
+                    "description": "Quiet Time",
+                    "member": "quiet",
+                    "type": "u"
+                },
+                {
+                    "start": 154,
+                    "end": 159,
+                    "description": "Spare",
+                    "member": "ignored-154",
+                    "type": "x"
+                }
+            ]
+        },
+        "24": {
+            "name": "Static Data Report",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 39,
+                    "description": "Part Number",
+                    "member": "partno",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 159,
+                    "description": "Vessel Name",
+                    "member": "shipname",
+                    "type": "t"
+                },
+                {
+                    "start": 160,
+                    "end": 167,
+                    "description": "Spare",
+                    "member": "ignored-160",
+                    "type": "x"
+                },
+                {
+                    "start": 40,
+                    "end": 47,
+                    "description": "Ship Type",
+                    "member": "shiptype",
+                    "type": "e"
+                },
+                {
+                    "start": 48,
+                    "end": 65,
+                    "description": "Vendor ID",
+                    "member": "vendorid",
+                    "type": "t"
+                },
+                {
+                    "start": 66,
+                    "end": 69,
+                    "description": "Unit Model Code",
+                    "member": "model",
+                    "type": "u"
+                },
+                {
+                    "start": 70,
+                    "end": 89,
+                    "description": "Serial Number",
+                    "member": "serial",
+                    "type": "u"
+                },
+                {
+                    "start": 90,
+                    "end": 131,
+                    "description": "Call Sign",
+                    "member": "callsign",
+                    "type": "t"
+                },
+                {
+                    "start": 132,
+                    "end": 140,
+                    "description": "Dimension to Bow",
+                    "member": "to_bow",
+                    "type": "u"
+                },
+                {
+                    "start": 141,
+                    "end": 149,
+                    "description": "Dimension to Stern",
+                    "member": "to_stern",
+                    "type": "u"
+                },
+                {
+                    "start": 150,
+                    "end": 155,
+                    "description": "Dimension to Port",
+                    "member": "to_port",
+                    "type": "u"
+                },
+                {
+                    "start": 156,
+                    "end": 161,
+                    "description": "Dimension to Starboard",
+                    "member": "to_starboard",
+                    "type": "u"
+                },
+                {
+                    "start": 132,
+                    "end": 161,
+                    "description": "Mothership MMSI",
+                    "member": "mothership_mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 162,
+                    "end": 167,
+                    "description": "Spare",
+                    "member": "ignored-162",
+                    "type": "x"
+                }
+            ]
+        },
+        "25": {
+            "name": "Single Slot Binary Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 38,
+                    "description": "Destination indicator",
+                    "member": "addressed",
+                    "type": "b"
+                },
+                {
+                    "start": 39,
+                    "end": 39,
+                    "description": "Binary data flag",
+                    "member": "structured",
+                    "type": "b"
+                },
+                {
+                    "start": 40,
+                    "end": 40,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                }
+            ]
+        },
+        "26": {
+            "name": "Multiple Slot Binary Message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 38,
+                    "description": "Destination indicator",
+                    "member": "addressed",
+                    "type": "b"
+                },
+                {
+                    "start": 39,
+                    "end": 39,
+                    "description": "Binary data flag",
+                    "member": "structured",
+                    "type": "b"
+                },
+                {
+                    "start": 40,
+                    "end": 40,
+                    "description": "Destination MMSI",
+                    "member": "dest_mmsi",
+                    "type": "u"
+                }
+            ]
+        },
+        "27": {
+            "name": "Long Range AIS Broadcast message",
+            "fields": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "description": "Message Type",
+                    "member": "type",
+                    "type": "u"
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "description": "Repeat Indicator",
+                    "member": "repeat",
+                    "type": "u"
+                },
+                {
+                    "start": 8,
+                    "end": 37,
+                    "description": "MMSI",
+                    "member": "mmsi",
+                    "type": "u"
+                },
+                {
+                    "start": 38,
+                    "end": 38,
+                    "description": "Position Accuracy",
+                    "member": "accuracy",
+                    "type": "u"
+                },
+                {
+                    "start": 39,
+                    "end": 39,
+                    "description": "RAIM flag",
+                    "member": "raim",
+                    "type": "u"
+                },
+                {
+                    "start": 40,
+                    "end": 43,
+                    "description": "Navigation Status",
+                    "member": "status",
+                    "type": "u"
+                },
+                {
+                    "start": 44,
+                    "end": 61,
+                    "description": "Longitude",
+                    "member": "lon",
+                    "type": "I4"
+                },
+                {
+                    "start": 62,
+                    "end": 78,
+                    "description": "Latitude",
+                    "member": "lat",
+                    "type": "I4"
+                },
+                {
+                    "start": 79,
+                    "end": 84,
+                    "description": "Speed Over Ground",
+                    "member": "speed",
+                    "type": "u"
+                },
+                {
+                    "start": 85,
+                    "end": 93,
+                    "description": "Course Over Ground",
+                    "member": "course",
+                    "type": "u"
+                },
+                {
+                    "start": 94,
+                    "end": 94,
+                    "description": "GNSS Position status",
+                    "member": "gnss",
+                    "type": "u"
+                },
+                {
+                    "start": 95,
+                    "end": 95,
+                    "description": "Spare",
+                    "member": "ignored-95",
+                    "type": "x"
+                }
+            ]
+        }
+    },
+    "lookups": {
+        "navigation_status": {
+            "0": "Under way using engine",
+            "1": "At anchor",
+            "2": "Not under command",
+            "3": "Restricted manoeuverability",
+            "4": "Constrained by her draught",
+            "5": "Moored",
+            "6": "Aground",
+            "7": "Engaged in Fishing",
+            "8": "Under way sailing",
+            "9": "Reserved for future amendment of Navigational Status for HSC",
+            "10": "Reserved for future amendment of Navigational Status for WIG",
+            "11": "Reserved for future use",
+            "12": "Reserved for future use",
+            "13": "Reserved for future use",
+            "14": "AIS-SART is active",
+            "15": "Not defined (default)"
+        },
+        "ship_type": {
+            "0": "Not available (default)",
+            "1": "Reserved for future use",
+            "2": "Reserved for future use",
+            "3": "Reserved for future use",
+            "4": "Reserved for future use",
+            "5": "Reserved for future use",
+            "6": "Reserved for future use",
+            "7": "Reserved for future use",
+            "8": "Reserved for future use",
+            "9": "Reserved for future use",
+            "10": "Reserved for future use",
+            "11": "Reserved for future use",
+            "12": "Reserved for future use",
+            "13": "Reserved for future use",
+            "14": "Reserved for future use",
+            "15": "Reserved for future use",
+            "16": "Reserved for future use",
+            "17": "Reserved for future use",
+            "18": "Reserved for future use",
+            "19": "Reserved for future use",
+            "20": "Wing in ground (WIG), all ships of this type",
+            "21": "Wing in ground (WIG), Hazardous category A",
+            "22": "Wing in ground (WIG), Hazardous category B",
+            "23": "Wing in ground (WIG), Hazardous category C",
+            "24": "Wing in ground (WIG), Hazardous category D",
+            "25": "Wing in ground (WIG), Reserved for future use",
+            "26": "Wing in ground (WIG), Reserved for future use",
+            "27": "Wing in ground (WIG), Reserved for future use",
+            "28": "Wing in ground (WIG), Reserved for future use",
+            "29": "Wing in ground (WIG), Reserved for future use",
+            "30": "Fishing",
+            "31": "Towing",
+            "32": "Towing: length exceeds 200m or breadth exceeds 25m",
+            "33": "Dredging or underwater ops",
+            "34": "Diving ops",
+            "35": "Military ops",
+            "36": "Sailing",
+            "37": "Pleasure Craft",
+            "38": "Reserved",
+            "39": "Reserved",
+            "40": "High speed craft (HSC), all ships of this type",
+            "41": "High speed craft (HSC), Hazardous category A",
+            "42": "High speed craft (HSC), Hazardous category B",
+            "43": "High speed craft (HSC), Hazardous category C",
+            "44": "High speed craft (HSC), Hazardous category D",
+            "45": "High speed craft (HSC), Reserved for future use",
+            "46": "High speed craft (HSC), Reserved for future use",
+            "47": "High speed craft (HSC), Reserved for future use",
+            "48": "High speed craft (HSC), Reserved for future use",
+            "49": "High speed craft (HSC), No additional information",
+            "50": "Pilot Vessel",
+            "51": "Search and Rescue vessel",
+            "52": "Tug",
+            "53": "Port Tender",
+            "54": "Anti-pollution equipment",
+            "55": "Law Enforcement",
+            "56": "Spare - Local Vessel",
+            "57": "Spare - Local Vessel",
+            "58": "Medical Transport",
+            "59": "Noncombatant ship according to RR Resolution No. 18",
+            "60": "Passenger, all ships of this type",
+            "61": "Passenger, Hazardous category A",
+            "62": "Passenger, Hazardous category B",
+            "63": "Passenger, Hazardous category C",
+            "64": "Passenger, Hazardous category D",
+            "65": "Passenger, Reserved for future use",
+            "66": "Passenger, Reserved for future use",
+            "67": "Passenger, Reserved for future use",
+            "68": "Passenger, Reserved for future use",
+            "69": "Passenger, No additional information",
+            "70": "Cargo, all ships of this type",
+            "71": "Cargo, Hazardous category A",
+            "72": "Cargo, Hazardous category B",
+            "73": "Cargo, Hazardous category C",
+            "74": "Cargo, Hazardous category D",
+            "75": "Cargo, Reserved for future use",
+            "76": "Cargo, Reserved for future use",
+            "77": "Cargo, Reserved for future use",
+            "78": "Cargo, Reserved for future use",
+            "79": "Cargo, No additional information",
+            "80": "Tanker, all ships of this type",
+            "81": "Tanker, Hazardous category A",
+            "82": "Tanker, Hazardous category B",
+            "83": "Tanker, Hazardous category C",
+            "84": "Tanker, Hazardous category D",
+            "85": "Tanker, Reserved for future use",
+            "86": "Tanker, Reserved for future use",
+            "87": "Tanker, Reserved for future use",
+            "88": "Tanker, Reserved for future use",
+            "89": "Tanker, No additional information",
+            "90": "Other Type, all ships of this type",
+            "91": "Other Type, Hazardous category A",
+            "92": "Other Type, Hazardous category B",
+            "93": "Other Type, Hazardous category C",
+            "94": "Other Type, Hazardous category D",
+            "95": "Other Type, Reserved for future use",
+            "96": "Other Type, Reserved for future use",
+            "97": "Other Type, Reserved for future use",
+            "98": "Other Type, Reserved for future use",
+            "99": "Other Type, no additional information"
+        }
+    }
+}
