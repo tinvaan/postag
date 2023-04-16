@@ -8,6 +8,7 @@ import re
 import time
 from functools import reduce
 from io import TextIOBase
+from smart_open import open as sopen
 
 aivdm_pattern = re.compile(r'([.0-9]+)?\s*(![A-Z]{5},\d,\d,.?,[AB12]?,[^,]+,[0-6]\*[0-9A-F]{2})')
 
@@ -193,7 +194,7 @@ def parse_one(string, default_to_current_time=False):
     payload = NmeaPayload(fields[5], int(fields[6]))
     if fragment_count == 1:
         return Sentence(talker, sentence_type, radio_channel, payload,
-                        [checksum], sentence_time, [message], sentence_source)
+                        [checksum], sentence_time, [message], sentence_source, string)
     else:
         fragment_number = int(fields[2])
         message_id = fields[3]
@@ -686,7 +687,10 @@ def _decoder_for_type(number):
 
 class SentenceFragment:
     def __init__(self, talker, sentence_type, total_fragments, fragment_number,
-                 message_id, radio_channel, payload, checksum, received_time=None, text=None, source=None):
+                 message_id, radio_channel, payload, checksum, received_time=None,
+                 text=None, source=None, string=None):
+        self.string = string
+        self.source = source
         self.talker = talker
         self.sentence_type = sentence_type
         self.total_fragments = total_fragments
@@ -697,7 +701,6 @@ class SentenceFragment:
         self.checksum = checksum
         self.time = received_time
         self.text = text
-        self.source = source
 
     def initial(self):
         return self.fragment_number == 1
@@ -745,7 +748,8 @@ class Field(object):
 
 class Sentence:
     def __init__(self, talker, sentence_type, radio_channel, payload,
-                 checksums, received_time=None, text=None, source=None):
+                 checksums, received_time=None, text=None, source=None, string=None):
+        self.string = string
         self.source = source
         self.talker = talker
         self.sentence_type = sentence_type
@@ -883,6 +887,8 @@ def lines_from_source(source):
         yield from _handle_serial_source(source)
     elif re.match("https?://.*", source):
         yield from _handle_url_source(source)
+    elif re.match("s3://", source):
+        yield from _handle_blob_source(source)
     else:
         # assume it's a file
         yield from _handle_file_source(source)
@@ -955,4 +961,10 @@ def _handle_file_source(source):
         source_reader = open(source)
     with source_reader as f:
         for line in f:
+            yield line
+
+
+def _handle_blob_source(source):
+    with sopen(source) as obj:
+        for line in obj:
             yield line
