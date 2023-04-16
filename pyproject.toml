@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "postag"
+version = "0.1.0"
+description = "Satellite AIS message position tagging"
+authors = ["Harish Navnit <harishnavnit@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.28.2"
+boto3 = "^1.26.114"
+pypredict = "^1.7.0"
+smart-open = "^6.3.0"
+
+[tool.poetry.group.dev.dependencies]
+moto = "^4.1.7"
+pytest = "^7.3.1"
+pytest-sugar = "^0.9.7"
+coverage = "^7.2.3"
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
