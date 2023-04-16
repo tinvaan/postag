@@ -1,5 +1,6 @@
 
 import boto3
+import contextlib
 import predict
 import requests
 
@@ -27,9 +28,10 @@ class TLE:
 def parse(uri):
     for sentence in sentences_from_source(uri):
         if sentence.source and sentence.source not in ['terrestrial', 'dynamic']:
-            tle = TLE.get(int(sentence.source))
-            sat = predict.observe(tle, TLE.qth, sentence.time)
-            yield f'\p:{sat.get("latitude", "")},\q:{sat.get("longitude", "")},{sentence.string}'
+            with contextlib.suppress(ValueError): # skip malformed source strings
+                tle = TLE.get(int(sentence.source))
+                sat = predict.observe(tle, TLE.qth, sentence.time)
+                yield f'\p:{sat.get("latitude", "")},\q:{sat.get("longitude", "")},{sentence.string}'
 
 
 def write(uri, sentences):
