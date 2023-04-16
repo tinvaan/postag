@@ -35,5 +35,5 @@ def parse(uri):
 
 
 def write(uri, sentences):
-    with open(uri, 'wb', transport_params={'client': session.client('s3')}) as fout:
+    with open(uri, 'w', transport_params={'client': session.client('s3')}) as fout:
         return fout.writelines(sentences)
