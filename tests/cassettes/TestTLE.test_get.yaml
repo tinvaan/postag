@@ -1,0 +1,194 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: http://tle.spire.com/25544
+  response:
+    body:
+      string: '0 ISS (ZARYA)
+
+        1 25544U 98067A   23106.50844690  .00020215  00000-0  36275-3 0  9994
+
+        2 25544  51.6392 274.1971 0005904 200.0032 260.3896 15.49871570392223
+
+        '
+    headers:
+      Content-Length:
+      - '154'
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 16 Apr 2023 16:44:16 GMT
+      ETag:
+      - '"d634efb4b44fed82496e65ede8979b5b"'
+      Last-Modified:
+      - Sun, 16 Apr 2023 16:30:52 GMT
+      Server:
+      - AmazonS3
+      x-amz-id-2:
+      - Ncowf6h0NjmZw7g75j/E9l7tD8FN0t7nUhTtg+pTliosR8bMCvEyrNtXe7VpUGXmDtPyChzgmIE=
+      x-amz-request-id:
+      - S4AZAB2SMBYXH0A3
+      x-amz-version-id:
+      - 9KMs1luPriCR41GDx3o8LxL3mPlCHkx9
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: http://tle.spire.com/40044
+  response:
+    body:
+      string: '0 LEMUR 1
+
+        1 40044U 14033AL  23105.44138345  .00003516  00000-0  50441-3 0  9998
+
+        2 40044  97.6656 282.9618 0055880 259.9835  99.5067 14.76048999474004
+
+        '
+    headers:
+      Content-Length:
+      - '150'
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 16 Apr 2023 16:44:17 GMT
+      ETag:
+      - '"fb734898b0f20a26a8698057c3e8252e"'
+      Last-Modified:
+      - Sun, 16 Apr 2023 16:32:22 GMT
+      Server:
+      - AmazonS3
+      x-amz-id-2:
+      - 5RaUtfIbiaSvVM36biCz7FLHXCSqqFGCxBJmnqEcF6LtVa+lwFiYOQqrOZ+w0dNZnY2H/IS/E04=
+      x-amz-request-id:
+      - 5MJKW63M6R1506EV
+      x-amz-version-id:
+      - ivXQAQLMXvJk9g9_a_D.CpwinLltYgWP
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: http://tle.spire.com/1099
+  response:
+    body:
+      string: '0 THOR ABLESTAR DEB
+
+        1  1099U 64083G   23103.71274420  .00000224  00000-0  27423-3 0  9995
+
+        2  1099  89.8755 156.6081 0043173 109.4647  40.7750 13.62194782824852
+
+        '
+    headers:
+      Content-Length:
+      - '160'
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 16 Apr 2023 16:44:17 GMT
+      ETag:
+      - '"2e3ef40b7fb3e1c4c309ab521c1c60ed"'
+      Last-Modified:
+      - Fri, 14 Apr 2023 17:30:35 GMT
+      Server:
+      - AmazonS3
+      x-amz-id-2:
+      - LhcFMQvZuIzXzdz0rhNanGf4f15HLXGB43mIZk+zL+ebK5xQDV9J/t8L7zELiueY4zu60YNxxAg=
+      x-amz-request-id:
+      - 5MJRFM0F0D5YC4G9
+      x-amz-version-id:
+      - MlIg9r89iMK62E_9Zw9AhatBUPOfyU7.
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: http://tle.spire.com/20010
+  response:
+    body:
+      string: '<html>
+
+        <head><title>404 Not Found</title></head>
+
+        <body>
+
+        <h1>404 Not Found</h1>
+
+        <ul>
+
+        <li>Code: NoSuchKey</li>
+
+        <li>Message: The specified key does not exist.</li>
+
+        <li>Key: 20010</li>
+
+        <li>RequestId: 5MJZQ2NEKEEN6KKG</li>
+
+        <li>HostId: JCZ2VjoFsvL0YoOHmFyPhAcmOEE55HhvXOGc15WMj80t92PLlWmNye2v0dYYY8FIq2tuZnhT8yo=</li>
+
+        </ul>
+
+        <hr/>
+
+        </body>
+
+        </html>
+
+        '
+    headers:
+      Content-Length:
+      - '340'
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Sun, 16 Apr 2023 16:44:15 GMT
+      Server:
+      - AmazonS3
+      x-amz-id-2:
+      - JCZ2VjoFsvL0YoOHmFyPhAcmOEE55HhvXOGc15WMj80t92PLlWmNye2v0dYYY8FIq2tuZnhT8yo=
+      x-amz-request-id:
+      - 5MJZQ2NEKEEN6KKG
+    status:
+      code: 404
+      message: Not Found
+version: 1

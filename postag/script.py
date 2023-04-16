@@ -14,12 +14,12 @@ session = boto3.Session()
 
 class TLE:
     session = requests.Session()
-    host = 'http://tle.spire.com'
+    host = 'http://tle.spire.com/'
     qth = (37.771034, 122.413815, 7)
 
     @classmethod
     def get(cls, norad_id):
-        r = cls.session.get(cls.host + norad_id)
+        r = cls.session.get(cls.host + str(norad_id))
         if not r.ok:
             r.raise_for_status()
         return r.text
