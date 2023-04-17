@@ -27,9 +27,9 @@ class TestLambdaHandler(AWSEnv):
     def test_lambda_handler(self):
         # Pesky import
         # https://docs.getmoto.org/en/latest/docs/getting_started.html#what-about-those-pesky-imports
-        from postag.lambda_function import lambda_handler
+        from postag import func
 
-        response = lambda_handler(dict(), dict())
+        response = func.run(dict(), dict())
         self.assertEqual(response.get('status'), 'updated')
         self.assertGreater(len(response.get('modified')), 0)
 
