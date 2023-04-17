@@ -33,5 +33,5 @@ class AWSEnv(unittest.TestCase):
     def setUpClass(cls):
         cls.key = 'test.sample'
         cls.tmp = tempfile.mktemp()
-        cls.bucket = os.getenv('AWS_TEST_BUCKET')
+        cls.bucket = os.getenv('AWS_TEST_BUCKET', 'foobar')
         cls.blob = f's3://{cls.bucket}/{cls.key}'
