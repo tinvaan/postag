@@ -3,8 +3,6 @@ import os
 import tempfile
 import unittest
 
-from moto import mock_s3
-
 
 stream = [
     '\s:terrestrial,c:1615816351*52\!AIVDM,1,1,,A,342O;g@P@61tAMRF00EK@8;00>@<,0*34\n',
