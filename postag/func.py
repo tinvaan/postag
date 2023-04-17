@@ -8,7 +8,7 @@ from . import script
 s3 = boto3.resource('s3')
 
 
-def lambda_handler(event, context):
+def run(event, context):
     written = []
     src = s3.Bucket(os.getenv('AWS_SOURCE_BUCKET'))
     dst = s3.Bucket(os.getenv('AWS_DESTINATION_BUCKET'))
