@@ -6,7 +6,7 @@ import requests
 
 from smart_open import open
 
-from libs.simpleais import sentences_from_source
+from postag.libs.simpleais import sentences_from_source
 
 
 session = boto3.Session()
