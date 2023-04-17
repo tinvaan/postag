@@ -2,7 +2,7 @@
 import boto3
 import os
 
-from . import script
+from postag import script
 
 
 s3 = boto3.resource('s3')
