@@ -22,9 +22,10 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: run
         run: |
-          pip install tox pipx
+          pip install pipx tox pytest pytest-cov coverage
           pipx install poetry
           poetry install --no-root
+
           tox -e py
 
   lint:
