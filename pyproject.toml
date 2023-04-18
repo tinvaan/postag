@@ -6,7 +6,7 @@ authors = ["Harish Navnit <harishnavnit@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 requests = "^2.28.2"
 boto3 = "^1.26.114"
 pypredict = "^1.7.0"
