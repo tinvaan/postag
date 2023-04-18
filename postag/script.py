@@ -28,10 +28,11 @@ class TLE:
 def parse(uri):
     for sentence in sentences_from_source(uri):
         if sentence.source and sentence.source not in ['terrestrial', 'dynamic']:
-            with contextlib.suppress(ValueError): # skip malformed source strings
+            with contextlib.suppress(ValueError):  # skip malformed source strings
                 tle = TLE.get(int(sentence.source))
                 sat = predict.observe(tle, TLE.qth, sentence.time)
-                yield f'\p:{sat.get("latitude", "")},\q:{sat.get("longitude", "")},{sentence.string}'
+                lat, lon = sat.get('latitude', ''), sat.get('longitude', '')
+                yield f'\p:{lat},\q:{lon},{sentence.string}'  # noqa
 
 
 def write(uri, sentences):
