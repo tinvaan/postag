@@ -30,7 +30,7 @@ The lambda function implementation in itself is fairly trivial. Designing an end
 
     This required patching [simpleais](https://github.com/wpietri/simpleais) to handle blob source inputs.
 
-    I've raised a PR with this change to the upstream repository: https://github.com/wpietri/simpleais and have included the patched source inside the [`postag/libs`](./postag/libs/) directory.
+    I've raised a PR with this change to the upstream repository: https://github.com/wpietri/simpleais/pull/3 and have included the patched source inside the [`postag/libs`](./postag/libs/) directory.
 
 2. Repeatable builds
 
