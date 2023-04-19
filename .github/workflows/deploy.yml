@@ -1,4 +1,4 @@
-name: Auto deploy to AWS lambda function
+name: Deploy
 
 on:
   push:
