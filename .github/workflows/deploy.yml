@@ -39,26 +39,26 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+      - uses: aws-actions/amazon-ecr-login@v1
+        id: login-ecr
       - name: Upload Lambda function from ECR image
-        id: publish
+        env:
+          TAG: ${{ github.sha }}
+          ROLE: ${{ secrets.AWS_ROLE_ARN }}
+          SRC: ${{ secrets.AWS_SOURCE_BUCKET }}
+          DST: ${{ secrets.AWS_DESTINATION_BUCKET}}
+          REPO: ${{ secrets.AWS_ECR_REPOSITORY }}
+          LAMBDA: ${{ secrets.AWS_LAMBDA_FUNCTION }}
+          ECR: ${{ steps.login-ecr.outputs.registry }}
         run: |
-          if aws lambda get-function --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} > /dev/null 2>&1; then
-            aws lambda update-function-configuration \
-              --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} \
-              --image-uri ${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }}
-
-            aws lambda update-function-code \
-              --publish --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} \
-              --image-uri ${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }}
+          if aws lambda get-function --function-name $LAMBDA > /dev/null 2>&1; then
+            aws lambda update-function-code --publish \
+              --function-name $LAMBDA --image-uri $ECR/$REPO:$TAG
           else
-            aws lambda create-function \
-              --timeout 900 --package-type Image \
-              --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --role=${{ secrets.AWS_ROLE_ARN }} \
-              --code ImageUri=${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }} \
-              --environment Variables="{AWS_SOURCE_BUCKET=${{ secrets.AWS_SOURCE_BUCKET }},AWS_DESTINATION_BUCKET=${{ secrets.AWS_DESTINATION_BUCKET}}}"
+            aws lambda create-function --timeout 900 --package-type Image \
+              --function-name $LAMBDA --role=$ROLE --code ImageUri=$ECR/$REPO:$TAG \
+              --environment Variables="{AWS_SOURCE_BUCKET=$SRC,AWS_DESTINATION_BUCKET=$DST}"
           fi
-
-          echo "::set-output name=lambda-arn::$(aws lambda get-function --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --query 'Configuration.FunctionArn' --output text)"
 
   invoke:
     runs-on: ubuntu-latest
@@ -69,15 +69,22 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-      - name: Setup a CloudWatch rule to periodically invoke the lambda function
+
+      - name: Find the lambda function ARN
+        id: lambda-arn
         run: |
-          if aws events describe-rule --name ${{ secrets.AWS_LAMBDA_FUNCTION }}-invoke > /dev/null 2>&1; then
-            aws events put-targets --rule ${{ secrets.AWS_LAMBDA_FUNCTION }}-invoke \
-                                   --targets Id=1,Arn=${{ needs.deploy.outputs.lambda-arn}}
+          echo "::set-output name=arn::$(aws lambda get-function --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --query 'Configuration.FunctionArn' --output text)"
+      - name: Setup a CloudWatch rule to periodically invoke the lambda function
+        env:
+          ARN: ${{ steps.lambda-arn.outputs.arn }}
+          LAMBDA: ${{ secrets.AWS_LAMBDA_FUNCTION }}
+          RULE: ${{ secrets.AWS_LAMBDA_FUNCTION }}-invoke
+        run: |
+          if aws events describe-rule --name $RULE > /dev/null 2>&1; then
+            aws events put-targets --rule $RULE --targets Id=1,Arn=$ARN
           else
-            aws events put-rule --description "Invoke ${{ secrets.AWS_LAMBDA_FUNCTION }} every day at midnight" \
-                                --name ${{ secrets.AWS_LAMBDA_FUNCTION }}-invoke \
-                                --target ${{ needs.deploy.outputs.lambda-arn}} \
+            aws events put-rule --name $RULE --state ENABLED \
                                 --schedule-expression "cron(0 0 * * ? *)" \
-                                --state ENABLED
+                                --description "Invoke $LAMBDA every day at midnight"
+            aws events put-targets --rule $RULE --targets Id=1,Arn=$ARN
           fi
