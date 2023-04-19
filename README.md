@@ -18,7 +18,7 @@ The postag service adds location metadata tags to the AIS message stream sentenc
 - `\q`: Latitude of the sub satellite point at the time of the message.
 - `\r`: Red flag, denoting that vessel's position in the message is outside of the satellite’s footprint.
 
-A spoofed message will contain the red flag tag, `\r SPOOF` while a valid message would look like `\r OK`.
+<b>TODO: </b>A spoofed message will contain the red flag tag, `\r SPOOF` while a valid message would look like `\r OK`.
 
 ## Challenges
 
