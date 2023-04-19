@@ -48,7 +48,13 @@ jobs:
           aws lambda get-function --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }}
           if [ $? -eq 0 ]
           then
-            aws lambda update-function-code --publish --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --image-uri ${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }}
+            aws lambda update-function-code \
+              --publish --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} \
+              --image-uri ${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }}
           else
-            aws lambda create-function --package-type Image --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --code ImageUri=${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }} --role=${{ secrets.AWS_ROLE_ARN }}
+            aws lambda create-function \
+              --timeout 900 --package-type Image \
+              --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --role=${{ secrets.AWS_ROLE_ARN }} \
+              --code ImageUri=${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }} \
+              --environment Variables={AWS_SOURCE_BUCKET=${{ secrets.AWS_SOURCE_BUCKET }},AWS_DESTINATION_BUCKET=${{ secrets.AWS_DESTINATION_BUCKET}}}
           fi
