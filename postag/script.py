@@ -32,7 +32,7 @@ def parse(uri):
                 tle = TLE.get(int(sentence.source))
                 sat = predict.observe(tle, TLE.qth, sentence.time)
                 lat, lon = sat.get('latitude', ''), sat.get('longitude', '')
-                yield f'\p:{lat},\q:{lon},{sentence.string}'  # noqa
+                yield f'\p:{lon},\q:{lat},{sentence.string}'  # noqa
 
 
 def write(uri, sentences):
