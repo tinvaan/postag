@@ -55,7 +55,7 @@ jobs:
               --timeout 900 --package-type Image \
               --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --role=${{ secrets.AWS_ROLE_ARN }} \
               --code ImageUri=${{ needs.image.outputs.registry }}/${{ secrets.AWS_ECR_REPOSITORY }}:${{ github.sha }} \
-              --environment Variables={AWS_SOURCE_BUCKET=${{ secrets.AWS_SOURCE_BUCKET }},AWS_DESTINATION_BUCKET=${{ secrets.AWS_DESTINATION_BUCKET}}}
+              --environment Variables="{AWS_SOURCE_BUCKET=${{ secrets.AWS_SOURCE_BUCKET }},AWS_DESTINATION_BUCKET=${{ secrets.AWS_DESTINATION_BUCKET}}}"
           fi
 
           echo "::set-output name=lambda-arn::$(aws lambda get-function --function-name ${{ secrets.AWS_LAMBDA_FUNCTION }} --query 'Configuration.FunctionArn' --output text)"
