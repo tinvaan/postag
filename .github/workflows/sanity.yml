@@ -1,4 +1,4 @@
-name: Unit tests and linting
+name: Sanity
 
 on:
   push:

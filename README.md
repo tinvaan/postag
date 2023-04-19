@@ -1,5 +1,6 @@
 
 # postag
+[![Tests](https://github.com/tinvaan/postag/actions/workflows/sanity.yml/badge.svg)](https://github.com/tinvaan/postag/actions/workflows/sanity.yml) &nbsp; [![Deploy](https://github.com/tinvaan/postag/actions/workflows/deploy.yml/badge.svg)](https://github.com/tinvaan/postag/actions/workflows/deploy.yml)
 
 Satellite AIS message position tagging.
 
