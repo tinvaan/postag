@@ -29,9 +29,11 @@ The lambda function implementation in itself is fairly trivial. Designing an end
 
     Instead of downloading S3 objects from the source bucket and passing each of them as inputs to [simpleais](https://github.com/wpietri/simpleais), a cleaner approach was to directly pass the S3 bucket URI to [simpleais](https://github.com/wpietri/simpleais).
 
+    In addition, [simpleais](https://github.com/wpietri/simpleais) now stores the `source` and `received_time` attributes from the parsed TCP stream message.
+
     This required patching [simpleais](https://github.com/wpietri/simpleais) to handle blob source inputs.
 
-    I've raised a PR with this change to the upstream repository: https://github.com/wpietri/simpleais/pull/3 and have included the patched source inside the [`postag/libs`](./postag/libs/) directory.
+    I've raised a PR with these changes to the upstream repository: https://github.com/wpietri/simpleais/pull/3 and have included the patched source inside the [`postag/libs`](./postag/libs/) directory.
 
 2. Repeatable builds
 

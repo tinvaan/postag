@@ -20,7 +20,7 @@ class TLE:
     @classmethod
     def get(cls, norad_id):
         r = cls.session.get(cls.host + str(norad_id))
-        if not r.ok:
+        if not r.ok:  # Explicit status check, added for readability
             r.raise_for_status()
         return r.text
 
