@@ -11,6 +11,7 @@ requests = "^2.28.2"
 boto3 = "^1.26.114"
 pypredict = "^1.7.0"
 smart-open = "^6.3.0"
+geopy = "^2.3.0"
 
 [tool.poetry.group.dev.dependencies]
 moto = "^4.1.7"
