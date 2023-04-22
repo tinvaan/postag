@@ -21,6 +21,8 @@ The postag service adds location metadata tags to the AIS message stream sentenc
 
 <b>TODO: </b>A spoofed message will contain the red flag tag, `\r SPOOF` while a valid message would look like `\r OK`.
 
+See https://github.com/tinvaan/postag/pull/7
+
 ## Challenges
 
 The lambda function implementation in itself is fairly trivial. Designing an end-to-end robust solution was a bit involved due to the following factors.
