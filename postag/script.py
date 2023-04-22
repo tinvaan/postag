@@ -4,6 +4,7 @@ import contextlib
 import predict
 import requests
 
+from geopy.distance import distance
 from smart_open import open
 
 from postag.libs.simpleais import sentences_from_source
@@ -29,10 +30,13 @@ def parse(uri):
     for sentence in sentences_from_source(uri):
         if sentence.source and sentence.source not in ['terrestrial', 'dynamic']:
             with contextlib.suppress(ValueError):  # skip malformed source strings
+                lon, lat = sentence.location()  # vessel coordinates
                 tle = TLE.get(int(sentence.source))
                 sat = predict.observe(tle, TLE.qth, sentence.time)
-                lat, lon = sat.get('latitude', ''), sat.get('longitude', '')
-                yield f'\p:{lon},\q:{lat},{sentence.string}'  # noqa
+
+                p, q = sat.get('longitude', ''), sat.get('latitude', '')  # SSP coordinates
+                r = 'OK' if distance((p, q), (lat, lon)) <= sat.get('footprint', 3000) else 'SPOOF'
+                yield f"\p:{p},\q:{q},\r:{r},{sentence.string}"  # noqa
 
 
 def write(uri, sentences):
